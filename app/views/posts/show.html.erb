@@ -1,0 +1,18 @@
+<article>
+  <h3>Название: <%= @post.title %></h3>
+  <blockquote>
+    <%= @post.text %>
+  </blockquote>
+  <p class="bg-info">Тема заметки:
+    <% if @post.theme == 'life' %>
+        <span>Жизнь</span>
+    <% else %>
+        <span>Работа</span>
+    <% end %>
+  </p>
+  <p><i class="fa fa-pencil-square-o" aria-hidden="true"></i><%= link_to 'Редактировать заметку', edit_post_path, class: "btn btn-link", role: 'button' %></p>
+  <p><i class="fa fa-eraser" aria-hidden="true"></i><%= link_to 'Удалить заметку', post_path(@post), method: :delete, data: {confirm: 'Вы уверены?'}, class: "btn btn-link", role: 'button' %></p>
+  <p><i class="fa fa-step-backward" aria-hidden="true"></i><%= link_to 'Вернуться ко всем заметкам',
+                 {:controller => :posts},
+                 {:class => "btn btn-link", :role => 'button'} %></p>
+</article>
