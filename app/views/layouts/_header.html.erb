@@ -36,7 +36,15 @@
         <!-- Список ссылок, расположенный справа -->
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to 'Создать новую заметку', new_post_path %></li>
-          <li><a href="#">Регистрация</a></li>
+            <% if current_user %>
+              <li> <a class="nav-brand">Вы вошли как <%= current_user.email %></a></li>
+              <li><%= link_to "Выйти", log_out_path %></li>
+            <% else %>
+              <li><%= link_to "Регистрация", sign_up_path %></li>
+              <li><%= link_to "Вход", log_in_path %></li>
+            <% end %>
+
+
         </ul>
       </div>
 

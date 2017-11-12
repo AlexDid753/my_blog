@@ -1,9 +1,16 @@
 Blog1::Application.routes.draw do
-  get "users/new"
+  get "sessions/new"
   root  'welcome#index'
+  get "users/new"
+  get 'sign_up' => 'users#new'
+  get 'log_in' => 'sessions#new'
+  get 'log_out' => 'sessions#destroy'
+
 
   get 'welcome' => 'welcome#index'
   resources :posts
+  resources :users
+  resources :sessions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
