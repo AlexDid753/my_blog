@@ -84,10 +84,13 @@ a.spoiler.collapsed:after{
     padding: 10px;
 }
 
-.thumbnail:hover {
-    background-color: #5CB85C;
+.theme_life:hover{
+    background-color: #5CB85C
 }
 
+.theme_work:hover{
+    background-color: #8a8fed
+}
 /*footer*/
 
 

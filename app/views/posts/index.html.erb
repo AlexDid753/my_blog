@@ -1,13 +1,22 @@
 <h2>Все заметки</h2>
-<div class="row">
-  <% @posts.each do |post| %>
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="thumbnail">
+
+<% @posts.each do |post| %>
+    <article class="col-xs-12 col-sm-6 col-md-3">
+      <%= content_tag :div, class: ["thumbnail", "theme_#{post.theme}"] do %>
           <div class="media-body">
             <%= link_to post.title, post_path(post), class: "text-center" %>
             <p><%= post.text %></p>
+
+            <!--<p>Тема " case post.theme
+                           when 'life'
+                             ('Жизнь')
+                           when 'work'
+                             ('Работа')
+                           else
+                             ('Без темы')
+                         end %>"
+            </p>-->
           </div>
-        </div>
-      </div>
-  <% end %>
-</div>
+      <% end %>
+    </article>
+<% end %>

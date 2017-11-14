@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :admin_user, only: [:edit, :update, :destroy]
+
   def index
     @posts = Post.all
   end
@@ -48,5 +50,11 @@ private
 def post_params
   params.require(:post).permit(:title, :text, :theme)
 end
+
+def admin_user
+  redirect_to(root_url) unless current_user.try(:admin?)
+end
+
+
 
 
