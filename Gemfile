@@ -3,8 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -33,6 +31,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'protected_attributes'
 gem 'faker'
 gem 'i18n'
+gem 'public_suffix', '~> 2.0', '>= 2.0.5'
 
 
 group :doc do
@@ -51,3 +50,6 @@ gem "bcrypt-ruby", :require => "bcrypt"
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development, :test do
+  gem 'sqlite3', '1.3.9'
+end
