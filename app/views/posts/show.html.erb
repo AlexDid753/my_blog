@@ -13,6 +13,8 @@
             ('Без темы')
         end %>
   </p>
+</article>
+<div class="post_links">
   <% if current_user && current_user.admin %>
       <p>
         <i class="fa fa-pencil-square-o" aria-hidden="true"></i><%= link_to 'Редактировать заметку', edit_post_path, class: "btn btn-link", role: 'button' %>
@@ -25,4 +27,9 @@
                                                                        {:controller => :posts},
                                                                        {:class => "btn btn-link", :role => 'button'} %>
   </p>
-</article>
+</div>
+<section id="comments">
+  <%= render 'comments/comments' %>
+</section>
+
+

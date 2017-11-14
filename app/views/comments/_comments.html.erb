@@ -1,0 +1,10 @@
+<div class="col-md-8">
+  <h2>
+    <small class="pull-right" id="comments_count"><%= @post.comments.count %> комментариев</small>
+    Комментарии
+  </h2>
+  <div class="comments-list">
+    <%= render @post.comments %>
+  </div>
+  <%= render 'comments/form' %>
+</div>

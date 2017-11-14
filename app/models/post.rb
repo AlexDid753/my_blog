@@ -1,4 +1,5 @@
 class Post < ActiveRecord::Base
+  has_many  :comments
   attr_accessible :title, :text, :theme
 
   validates :title, presence: true, length: { maximum: 120, minimum:5 }

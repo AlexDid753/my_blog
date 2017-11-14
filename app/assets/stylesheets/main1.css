@@ -133,4 +133,17 @@ a.spoiler.collapsed:after{
     padding: 10px 0px;
 }
 
+/*comments*/
+.user_name{
+    font-size:14px;
+    font-weight: bold;
+}
+.comments-list .media{
+    border-bottom: 1px dotted #ccc;
+}
+
+.comment{
+    padding: 5px;
+}
+
 

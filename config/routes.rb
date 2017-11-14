@@ -1,4 +1,5 @@
 Blog1::Application.routes.draw do
+
   get "sessions/new"
   root  'welcome#index'
   get "users/new"
@@ -8,7 +9,10 @@ Blog1::Application.routes.draw do
 
 
   get 'welcome' => 'welcome#index'
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
+
   resources :users
   resources :sessions
 
