@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :password, :password_confirmation
+  attr_accessible :email, :password, :password_confirmation, :nickname
   attr_accessor :password
 
   before_save :encrypt_password
@@ -8,6 +8,9 @@ class User < ActiveRecord::Base
   validates_presence_of :password, :on => :create
   validates_presence_of :email
   validates_uniqueness_of :email
+  validates_presence_of :nickname
+  validates_uniqueness_of :nickname
+
 
   def self.authenticate(email, password)
     user = find_by_email(email)
@@ -24,4 +27,8 @@ class User < ActiveRecord::Base
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end
   end
+
+
+
+
 end

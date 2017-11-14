@@ -31,6 +31,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'protected_attributes'
+gem 'faker'
+gem 'i18n'
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
