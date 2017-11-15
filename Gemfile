@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby "2.2.8"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
-
+gem 'puma'
 
 
 # Use SCSS for stylesheets
@@ -32,7 +32,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'protected_attributes'
 gem 'faker'
 gem 'i18n'
-gem 'public_suffix', '~> 2.0', '>= 2.0.5'
+gem 'public_suffix'
+gem 'ruby_dep', '~> 1.5'
 
 
 group :doc do
