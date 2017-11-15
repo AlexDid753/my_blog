@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+ruby "2.2.8"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -41,7 +41,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-gem "bcrypt-ruby", :require => "bcrypt"
+gem "bcrypt"
 
 # Use unicorn as the app server
 # gem 'unicorn'
