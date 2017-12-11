@@ -10,13 +10,13 @@
 #              password: "foobar",
 #              password_confirmation: "foobar",
 # )
-User.create!(nickname:  "Alex Didenko",
-             email: "alex.didenko753@gmail.com",
-             password:              "qwerty",
-             password_confirmation: "qwerty",
+User.create!(nickname:  'Alex Didenko',
+             email: 'alex.didenko753@gmail.com',
+             password:              'qwerty',
+             password_confirmation: 'qwerty',
              admin: true)
 
-20.times do |n|
+20.times do |_n|
   title = Faker::Hacker.say_something_smart
   text = Faker::Lorem.sentence(7)
   theme = 'life'
@@ -26,7 +26,7 @@ User.create!(nickname:  "Alex Didenko",
                theme: theme)
 end
 
-20.times do |n|
+20.times do |_n|
   title = Faker::Hacker.say_something_smart
   text = Faker::Lorem.sentence(7)
   theme = 'work'

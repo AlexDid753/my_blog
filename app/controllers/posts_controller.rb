@@ -1,15 +1,14 @@
 class PostsController < ApplicationController
-  before_action :admin_user, only: [:edit, :update, :destroy]
+  before_action :admin_user, only: %i[edit update destroy]
 
   def index
     @posts = Post.all
   end
 
-  def new
-  end
+  def new; end
 
   def create
-    #render text: params[:post].inspect
+    # render text: params[:post].inspect
     @post = Post.new(post_params)
     if @post.save
       redirect_to @post
@@ -36,8 +35,7 @@ class PostsController < ApplicationController
     end
   end
 
-  def delete
-  end
+  def delete; end
 
   def destroy
     @post = Post.find(params[:id])
@@ -54,7 +52,3 @@ end
 def admin_user
   redirect_to(root_url) unless current_user.try(:admin?)
 end
-
-
-
-

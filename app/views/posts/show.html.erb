@@ -4,14 +4,7 @@
     <%= @post.text %>
   </blockquote>
   <p class="bg-info">Тема заметки:
-    <%= case @post.theme
-          when 'life'
-            ('Жизнь')
-          when 'work'
-            ('Работа')
-          else
-            ('Без темы')
-        end %>
+    <%= theme_rus %>
   </p>
 </article>
 <div class="post_links">

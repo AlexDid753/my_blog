@@ -1,12 +1,10 @@
 Blog1::Application.routes.draw do
-
-  get "sessions/new"
-  root  'welcome#index'
-  get "users/new"
+  get 'sessions/new'
+  root 'welcome#index'
+  get 'users/new'
   get 'sign_up' => 'users#new'
   get 'log_in' => 'sessions#new'
   get 'log_out' => 'sessions#destroy'
-
 
   get 'welcome' => 'welcome#index'
   resources :posts do

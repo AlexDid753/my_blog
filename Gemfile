@@ -1,15 +1,14 @@
 source 'https://rubygems.org'
-ruby "2.2.8"
+ruby '2.2.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.2'
 gem 'puma'
-
+gem 'rails', '4.0.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
 gem 'bootstrap-sass'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -29,12 +28,13 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem 'protected_attributes'
 gem 'faker'
+gem 'haml_lint'
 gem 'i18n'
+gem 'protected_attributes'
 gem 'public_suffix'
+gem 'rubocop-rails'
 gem 'ruby_dep', '~> 1.5'
-
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -42,7 +42,7 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-gem "bcrypt"
+gem 'bcrypt'
 
 # Use unicorn as the app server
 # gem 'unicorn'

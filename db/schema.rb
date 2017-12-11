@@ -1,4 +1,4 @@
-# encoding: UTF-8
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,36 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171114122539) do
-
-  create_table "comments", force: true do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.integer  "post_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+ActiveRecord::Schema.define(version: 20_171_114_122_539) do
+  create_table 'comments', force: true do |t|
+    t.text     'content'
+    t.integer  'user_id'
+    t.integer  'post_id'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
 
-  add_index "comments", ["created_at"], name: "index_comments_on_created_at"
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+  add_index 'comments', ['created_at'], name: 'index_comments_on_created_at'
+  add_index 'comments', ['post_id'], name: 'index_comments_on_post_id'
+  add_index 'comments', ['user_id'], name: 'index_comments_on_user_id'
 
-  create_table "posts", force: true do |t|
-    t.string   "title"
-    t.text     "text"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "theme"
+  create_table 'posts', force: true do |t|
+    t.string   'title'
+    t.text     'text'
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
+    t.string   'theme'
   end
 
-  create_table "users", force: true do |t|
-    t.string   "nickname"
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
-    t.boolean  "admin",         default: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table 'users', force: true do |t|
+    t.string   'nickname'
+    t.string   'email'
+    t.string   'password_hash'
+    t.string   'password_salt'
+    t.boolean  'admin', default: false
+    t.datetime 'created_at'
+    t.datetime 'updated_at'
   end
-
 end
