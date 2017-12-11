@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :comments
+  has_many :comments, dependent: :destroy
   attr_accessible :email, :password, :password_confirmation, :nickname
   attr_accessor :password
 

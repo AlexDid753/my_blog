@@ -5,13 +5,9 @@
 
   <meta charset="utf-8">
 
-  <script src="https://code.jquery.com/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   <%= stylesheet_link_tag "application", media: "all",
-                          "data-turbolinks-track" => true %>
-  <%= stylesheet_link_tag "main1", media: "all",
                           "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -19,10 +15,14 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
+  <title><%= full_title(yield(:title)) %></title>
 </head>
 
 <body>
+
+
 <%= render 'layouts/header' %>
+
 <div class="container">
 
   <% flash.each do |name, msg| %>
@@ -31,7 +31,9 @@
 
   <%= yield %>
 </div>
+
 <%= render 'layouts/footer' %>
+
 <%= debug(params) if Rails.env.development? %>
 <%= debug current_user %>
 </body>

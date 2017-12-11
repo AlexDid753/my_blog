@@ -1,5 +1,6 @@
 class Post < ActiveRecord::Base
-  has_many :comments
+  has_many :comments, dependent: :destroy
+
   attr_accessible :title, :text, :theme
 
   validates :title, presence: true, length: { maximum: 120, minimum: 5 }
@@ -9,9 +10,9 @@ class Post < ActiveRecord::Base
   def theme_rus
     case theme
       when 'life'
-        ('Жизнь')
+        ('О жизни')
       when 'work'
-        ('Работа')
+        ('О работе')
       else
         ('Без темы')
     end

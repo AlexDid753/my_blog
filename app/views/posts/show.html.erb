@@ -1,11 +1,13 @@
+<title><%= full_title(yield(:title)) %></title>
+
 <article>
   <h3><%= @post.title %></h3>
   <blockquote>
     <%= @post.text %>
   </blockquote>
-  <p class="bg-info">Тема заметки:
-    <%= theme_rus %>
-  </p>
+  <div class="bg-info">Тема заметки:
+    <%= @post.theme_rus %>
+  </div>
 </article>
 <div class="post_links">
   <% if current_user && current_user.admin %>
